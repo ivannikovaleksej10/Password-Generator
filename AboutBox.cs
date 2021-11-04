@@ -17,6 +17,9 @@ namespace Passwords
         {
             InitializeComponent();
 
+            async void Exit() { for (Opacity = 1; Opacity > .0; Opacity -= .2) await Task.Delay(7); Close(); }
+            CloseButton.Click += (s, a) => Exit();
+
             ToolTip t = new ToolTip();
             t.SetToolTip(CloseButton, "Закрыть");
 
@@ -143,9 +146,9 @@ namespace Passwords
             Invalidate();
         }
 
-        void AboutBox_Load(object sender, EventArgs e)
+        async void AboutBox_Load(object sender, EventArgs e)
         {
-
+            for (Opacity = 0; Opacity < .97; Opacity += 0.2) await Task.Delay(10);
         }
 
         void LabelCompanyName_Click(object sender, EventArgs e)

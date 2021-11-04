@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Passwords
@@ -12,6 +13,10 @@ namespace Passwords
         public MainForm()
         {
             InitializeComponent();
+
+            async void Exit() { for (Opacity = 1; Opacity > .0; Opacity -= .2) await Task.Delay(7); Close(); }
+            CloseButton.Click += (s, a) => Exit();
+
             CloseButton.Click += (s, a) => Close();
 
             AboutButton.Click += (s, a) =>
@@ -39,6 +44,11 @@ namespace Passwords
             t.SetToolTip(CloseButton, "Закрыть");
             t.SetToolTip(AboutButton, "О программе...");
 
+        }
+
+        async void MainForm_Load(object sender, EventArgs e)
+        {
+            for (Opacity = 0; Opacity < .97; Opacity += 0.2) await Task.Delay(10);
         }
 
         public void FormPaint(Color color1, Color color2)
@@ -98,6 +108,6 @@ namespace Passwords
             settings.ShowDialog();
         }
 
-
+        
     }
 }

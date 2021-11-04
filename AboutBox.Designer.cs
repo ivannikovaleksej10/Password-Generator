@@ -221,6 +221,7 @@ namespace Passwords
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutBox";
+            this.Opacity = 0D;
             this.Padding = new System.Windows.Forms.Padding(9);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

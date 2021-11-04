@@ -58,7 +58,7 @@ namespace Passwords
 
         void Settings_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

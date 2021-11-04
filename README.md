@@ -33,7 +33,7 @@ __*How does he work:*__
 
 __Choose the types of characters that the password should consist of. It can be any combination of numbers, uppercase and lowercase letters, as well as%, *,),?, @, #, $, ~. If you do not need some symbols, do not put a tick in front of them .__
 
-**Specify the length of the password. * The program allows you to create combinations of 1 to 32 characters *, so it can work as a generator of not only passwords, but also random numbers, unique numbers, and verification codes.**
+**Specify the length of the password. *__The program allows you to create combinations of 1 to 32 characters__*, so it can work as a generator of not only passwords, but also random numbers, unique numbers, and verification codes.**
 
 **Press the button "*Generate*". The program will select a strong password for you.**
 

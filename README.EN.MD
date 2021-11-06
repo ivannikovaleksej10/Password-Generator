@@ -1,5 +1,7 @@
 # Password generator is an indispensable assistant when registering a new account, when you need to come up with a complex password that matches the criteria of the site.
 
+[Russian](https://github.com/lauendewrau/Password-Generator/blob/master/README.md)
+
 #### Select the structure of the password and its length, and the system will generate an individual sequence of characters for you. It only takes a few clicks from you and the program will help you generate several random strong passwords at once to choose from.
 
 Kaspersky Lab recommends changing the passwords for your e-mail boxes and social media accounts at least once every 2 months. The password generator from *lauendewrau* is a guarantee of reliability and uniqueness, because they are all created only once.

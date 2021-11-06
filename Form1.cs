@@ -25,6 +25,15 @@ namespace Passwords
                 About.ShowDialog();
             };
 
+            SaveButton.Click += (s, a) =>
+            {
+                Save save = new Save();
+                save.TbValue.Text = (textBox1.Text);
+                save.ShowDialog();
+            };
+
+            SettingsButton.Click += (s, a) => settings.ShowDialog();
+
             FormPaint(Color.FromArgb(44, 57, 67), Color.FromArgb(35, 44, 55));
 
             new List<Control> { FormName, HeaderPanel }.ForEach(x =>
@@ -38,11 +47,31 @@ namespace Passwords
                 };
             });
 
+            new List<Control> { FormName, AboutButton, CloseButton, GenButton }.ForEach(x =>
+            {
+                x.ForeColor = Color.FromName("White");
+
+                if (x.ToString().Contains("Button"))
+                {
+                    x.BackColor = Color.FromArgb(44, 57, 67);    
+                }
+            
+            });
+
+            textBox1.ForeColor = Color.FromName("White"); textBox1.BackColor = Color.FromArgb(54, 67, 77);
+
+            new List<Control> { SaveButton, CopyButton, SettingsButton }.ForEach(x =>
+            {
+                x.ForeColor = Color.FromName("White");
+                x.BackColor = Color.FromName("Transparent");
+            });
+
             ToolTip t = new ToolTip();
             t.SetToolTip(CopyButton, "Копировать");
             t.SetToolTip(SettingsButton, "Настройки");
             t.SetToolTip(CloseButton, "Закрыть");
             t.SetToolTip(AboutButton, "О программе...");
+            t.SetToolTip(SaveButton, "Сохранить и зашифровать");
 
         }
 
@@ -99,15 +128,14 @@ namespace Passwords
 
         void CopyButton_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(textBox1.Text);
+            if(textBox1.TextLength == 0)
+            {
+                // MessageBox.Show("Вы пытаетесь скопировать пустую строку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Clipboard.SetText(textBox1.Text);
+            }
         }
-
-        void SettingsButton_Click(object sender, EventArgs e)
-        {
-            
-            settings.ShowDialog();
-        }
-
-        
     }
 }

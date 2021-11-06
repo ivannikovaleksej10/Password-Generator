@@ -32,6 +32,7 @@ namespace Passwords
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.CloseButton = new System.Windows.Forms.Button();
             this.BackPanel = new System.Windows.Forms.Panel();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.CopyButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -51,8 +52,8 @@ namespace Passwords
             this.CloseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(67)))), ((int)(((byte)(77)))));
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseButton.ForeColor = System.Drawing.Color.White;
-            this.CloseButton.Location = new System.Drawing.Point(386, -1);
+            this.CloseButton.ForeColor = System.Drawing.Color.Black;
+            this.CloseButton.Location = new System.Drawing.Point(418, -1);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(30, 30);
             this.CloseButton.TabIndex = 0;
@@ -62,14 +63,30 @@ namespace Passwords
             // BackPanel
             // 
             this.BackPanel.BackColor = System.Drawing.Color.Transparent;
+            this.BackPanel.Controls.Add(this.SaveButton);
             this.BackPanel.Controls.Add(this.SettingsButton);
             this.BackPanel.Controls.Add(this.CopyButton);
             this.BackPanel.Controls.Add(this.textBox1);
             this.BackPanel.Controls.Add(this.GenButton);
             this.BackPanel.Location = new System.Drawing.Point(0, 33);
             this.BackPanel.Name = "BackPanel";
-            this.BackPanel.Size = new System.Drawing.Size(416, 78);
+            this.BackPanel.Size = new System.Drawing.Size(448, 78);
             this.BackPanel.TabIndex = 1;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.Transparent;
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(67)))), ((int)(((byte)(77)))));
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveButton.ForeColor = System.Drawing.Color.Black;
+            this.SaveButton.Location = new System.Drawing.Point(409, 6);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(27, 26);
+            this.SaveButton.TabIndex = 5;
+            this.SaveButton.Text = "💾";
+            this.SaveButton.UseVisualStyleBackColor = false;
             // 
             // SettingsButton
             // 
@@ -78,14 +95,13 @@ namespace Passwords
             this.SettingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(67)))), ((int)(((byte)(77)))));
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SettingsButton.ForeColor = System.Drawing.Color.White;
+            this.SettingsButton.ForeColor = System.Drawing.Color.Black;
             this.SettingsButton.Location = new System.Drawing.Point(376, 6);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(27, 26);
             this.SettingsButton.TabIndex = 4;
             this.SettingsButton.Text = "⚙";
             this.SettingsButton.UseVisualStyleBackColor = false;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // CopyButton
             // 
@@ -95,7 +111,7 @@ namespace Passwords
             this.CopyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(67)))), ((int)(((byte)(77)))));
             this.CopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CopyButton.ForeColor = System.Drawing.Color.White;
+            this.CopyButton.ForeColor = System.Drawing.Color.Black;
             this.CopyButton.Location = new System.Drawing.Point(343, 6);
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(27, 26);
@@ -106,7 +122,7 @@ namespace Passwords
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(67)))), ((int)(((byte)(77)))));
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -119,13 +135,13 @@ namespace Passwords
             // 
             // GenButton
             // 
-            this.GenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(67)))));
+            this.GenButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.GenButton.FlatAppearance.BorderSize = 0;
             this.GenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GenButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.GenButton.ForeColor = System.Drawing.Color.Black;
             this.GenButton.Location = new System.Drawing.Point(12, 38);
             this.GenButton.Name = "GenButton";
-            this.GenButton.Size = new System.Drawing.Size(391, 31);
+            this.GenButton.Size = new System.Drawing.Size(424, 31);
             this.GenButton.TabIndex = 0;
             this.GenButton.Text = "Генерировать";
             this.GenButton.UseVisualStyleBackColor = false;
@@ -137,7 +153,7 @@ namespace Passwords
             this.FormName.BackColor = System.Drawing.Color.Transparent;
             this.FormName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormName.ForeColor = System.Drawing.Color.White;
+            this.FormName.ForeColor = System.Drawing.Color.Black;
             this.FormName.Location = new System.Drawing.Point(9, 8);
             this.FormName.Name = "FormName";
             this.FormName.Size = new System.Drawing.Size(75, 16);
@@ -147,12 +163,12 @@ namespace Passwords
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.Transparent;
+            this.HeaderPanel.Controls.Add(this.CloseButton);
             this.HeaderPanel.Controls.Add(this.AboutButton);
             this.HeaderPanel.Controls.Add(this.FormName);
-            this.HeaderPanel.Controls.Add(this.CloseButton);
             this.HeaderPanel.Location = new System.Drawing.Point(0, 1);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(416, 32);
+            this.HeaderPanel.Size = new System.Drawing.Size(448, 32);
             this.HeaderPanel.TabIndex = 2;
             // 
             // AboutButton
@@ -163,8 +179,8 @@ namespace Passwords
             this.AboutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(67)))), ((int)(((byte)(77)))));
             this.AboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AboutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AboutButton.ForeColor = System.Drawing.Color.White;
-            this.AboutButton.Location = new System.Drawing.Point(357, -1);
+            this.AboutButton.ForeColor = System.Drawing.Color.Black;
+            this.AboutButton.Location = new System.Drawing.Point(389, -1);
             this.AboutButton.Name = "AboutButton";
             this.AboutButton.Size = new System.Drawing.Size(30, 30);
             this.AboutButton.TabIndex = 3;
@@ -175,7 +191,7 @@ namespace Passwords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 112);
+            this.ClientSize = new System.Drawing.Size(450, 112);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.BackPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -199,10 +215,11 @@ namespace Passwords
         private System.Windows.Forms.Label FormName;
         private System.Windows.Forms.Panel HeaderPanel;
         private System.Windows.Forms.Button GenButton;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button CopyButton;
         private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Button AboutButton;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

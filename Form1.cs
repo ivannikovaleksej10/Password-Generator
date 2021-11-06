@@ -68,7 +68,7 @@ namespace Passwords
 
             ToolTip t = new ToolTip();
             t.SetToolTip(CopyButton, "Копировать");
-            t.SetToolTip(SettingsButton, "Настройки");
+            t.SetToolTip(SettingsButton, "Настройки...");
             t.SetToolTip(CloseButton, "Закрыть");
             t.SetToolTip(AboutButton, "О программе...");
             t.SetToolTip(SaveButton, "Сохранить и зашифровать");

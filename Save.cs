@@ -112,7 +112,7 @@ namespace Passwords
                         FileStream fs = new FileStream(path, FileMode.Append);
                         using (StreamWriter sw = new StreamWriter(fs))
                         {
-                            sw.WriteLine(TbEncrypt.Text + "    " + thisDay.ToString("D"));
+                            sw.WriteLine(TbEncrypt.Text + " " + thisDay.ToString("D"));
                         }
                     }
             }

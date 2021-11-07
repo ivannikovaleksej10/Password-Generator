@@ -56,9 +56,32 @@ namespace Passwords
             Invalidate();
         }
 
+        void GetSettings()
+        {
+            checkBox1.Checked = Properties.Settings.Default.SpecChar;
+            checkBox2.Checked = Properties.Settings.Default.Numbers;
+            checkBox3.Checked = Properties.Settings.Default.CapLetters;
+            numericUpDown1.Value = Properties.Settings.Default.PassLength;
+        }
+
+        void SaveSettings()
+        {
+            Properties.Settings.Default.SpecChar = checkBox1.Checked;
+            Properties.Settings.Default.Numbers = checkBox2.Checked;
+            Properties.Settings.Default.CapLetters = checkBox3.Checked;
+            Properties.Settings.Default.PassLength = numericUpDown1.Value;
+
+            Properties.Settings.Default.Save();
+        }
+
         void Settings_Load(object sender, EventArgs e)
         {
-            
+            GetSettings();
+        }
+
+        void Settings_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

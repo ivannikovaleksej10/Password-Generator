@@ -14,6 +14,8 @@ namespace Passwords
         {
             InitializeComponent();
 
+            
+
             async void Exit() { for (Opacity = 1; Opacity > .0; Opacity -= .2) await Task.Delay(7); Close(); }
             CloseButton.Click += (s, a) => Exit();
 
@@ -21,15 +23,17 @@ namespace Passwords
 
             AboutButton.Click += (s, a) =>
             {
-                AboutBox About = new AboutBox();
-                About.ShowDialog();
+                using (AboutBox About = new AboutBox())
+                    About.ShowDialog();
             };
 
             SaveButton.Click += (s, a) =>
             {
-                Save save = new Save();
-                save.TbValue.Text = (textBox1.Text);
-                save.ShowDialog();
+                using (Save save = new Save())
+                {
+                    save.TbValue.Text = (textBox1.Text);
+                    save.ShowDialog();
+                }
             };
 
             SettingsButton.Click += (s, a) => settings.ShowDialog();
@@ -75,8 +79,22 @@ namespace Passwords
 
         }
 
+        void GetLastGenPass()
+        {
+            textBox1.Text = Properties.Settings.Default.LastGen;
+        }
+
+        void SaveLastGenPass()
+        {
+            Properties.Settings.Default.LastGen = textBox1.Text;
+
+            Properties.Settings.Default.Save();
+        }
+
         async void MainForm_Load(object sender, EventArgs e)
         {
+            GetLastGenPass();
+
             for (Opacity = 0; Opacity < .97; Opacity += 0.2) await Task.Delay(10);
         }
 
@@ -102,21 +120,26 @@ namespace Passwords
 
         void GenButton_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.SpecChar == false & Properties.Settings.Default.Numbers == false & Properties.Settings.Default.CapLetters == false & Properties.Settings.Default.PassLength == 0)
+            {
+                MessageBox.Show("Зайдите в меню настроек!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+
             string abc = "qwertyuiopasdfghjklzxcvbnm";
-            if (settings.checkBox1.Checked == true)//использовать спецсимволы
+            if (Properties.Settings.Default.SpecChar == true)//использовать спецсимволы
             {
                 abc += "!@#$%^&*()";
             }
-            if (settings.checkBox2.Checked == true)//юзать цифры
+            if (Properties.Settings.Default.Numbers == true)//юзать цифры
             {
                 abc += "123456789";
             }
-            if (settings.checkBox3.Checked == true)//использовать заглавные
+            if (Properties.Settings.Default.CapLetters == true)//использовать заглавные
             {
                 abc += "QWERTYUIOPASDFGHJKLZXCVBNM";
             }
 
-            int kol = (int)settings.numericUpDown1.Value; // кол-во символов
+            int kol = (int)Properties.Settings.Default.PassLength; // кол-во символов
             string result = "";
 
             Random rnd = new Random();
@@ -136,6 +159,11 @@ namespace Passwords
             {
                 Clipboard.SetText(textBox1.Text);
             }
+        }
+
+        void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveLastGenPass();
         }
     }
 }

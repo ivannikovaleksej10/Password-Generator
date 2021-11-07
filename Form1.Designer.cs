@@ -199,6 +199,7 @@ namespace Passwords
             this.Name = "MainForm";
             this.Opacity = 0D;
             this.Text = "Passwords";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.BackPanel.ResumeLayout(false);
             this.BackPanel.PerformLayout();

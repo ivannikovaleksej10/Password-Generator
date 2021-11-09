@@ -118,7 +118,6 @@ namespace Passwords
             this.CopyButton.TabIndex = 3;
             this.CopyButton.Text = "✄";
             this.CopyButton.UseVisualStyleBackColor = false;
-            this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
             // 
             // textBox1
             // 

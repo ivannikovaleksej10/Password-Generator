@@ -19,6 +19,18 @@ namespace Passwords
             async void Exit() { for (Opacity = 1; Opacity > .0; Opacity -= .2) await Task.Delay(7); Close(); }
             CloseButton.Click += (s, a) => Exit();
 
+            CopyButton.Click += (s, a) => 
+            {
+                if (textBox1.TextLength == 0)
+                {
+                    // MessageBox.Show("Вы пытаетесь скопировать пустую строку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    Clipboard.SetText(textBox1.Text);
+                }
+            };
+
             CloseButton.Click += (s, a) => Close();
 
             AboutButton.Click += (s, a) =>
@@ -76,7 +88,6 @@ namespace Passwords
             t.SetToolTip(CloseButton, "Закрыть");
             t.SetToolTip(AboutButton, "О программе...");
             t.SetToolTip(SaveButton, "Сохранить и зашифровать");
-
         }
 
         void GetLastGenPass()
@@ -126,39 +137,27 @@ namespace Passwords
             }
 
             string abc = "qwertyuiopasdfghjklzxcvbnm";
-            if (Properties.Settings.Default.SpecChar == true)//использовать спецсимволы
+            if (Properties.Settings.Default.SpecChar == true)
             {
-                abc += "!@#$%^&*()";
+                abc += @"!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"; // было: !@#$%^&*()
             }
-            if (Properties.Settings.Default.Numbers == true)//юзать цифры
+            if (Properties.Settings.Default.Numbers == true)
             {
-                abc += "123456789";
+                abc += "1234567890";
             }
-            if (Properties.Settings.Default.CapLetters == true)//использовать заглавные
+            if (Properties.Settings.Default.CapLetters == true)
             {
                 abc += "QWERTYUIOPASDFGHJKLZXCVBNM";
             }
 
-            int kol = (int)Properties.Settings.Default.PassLength; // кол-во символов
+            int amount = (int)Properties.Settings.Default.PassLength;
             string result = "";
 
             Random rnd = new Random();
             int lng = abc.Length;
-            for (int i = 0; i < kol; i++)
+            for (int i = 0; i < amount; i++)
                 result += abc[rnd.Next(lng)];
             textBox1.Text = result;
-        }
-
-        void CopyButton_Click(object sender, EventArgs e)
-        {
-            if(textBox1.TextLength == 0)
-            {
-                // MessageBox.Show("Вы пытаетесь скопировать пустую строку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Clipboard.SetText(textBox1.Text);
-            }
         }
 
         void MainForm_FormClosing(object sender, FormClosingEventArgs e)

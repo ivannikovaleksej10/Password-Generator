@@ -54,3 +54,5 @@
 
 ![image](https://user-images.githubusercontent.com/77196217/140972744-8740d9d1-8cd1-47c2-bd4e-cbc8f096060a.png)
 >Меню шифрования/дешифрования
+
+### [СКАЧАТЬ](https://github.com/lauendewrau/Password-Generator/releases)

@@ -34,12 +34,10 @@ namespace Passwords
             this.labelCopyright = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelProductName = new System.Windows.Forms.Label();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.FormName = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.tableLayoutPanel.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +53,7 @@ namespace Passwords
             this.okButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(67)))), ((int)(((byte)(77)))));
             this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.okButton.Location = new System.Drawing.Point(358, 257);
+            this.okButton.Location = new System.Drawing.Point(361, 257);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
             this.okButton.TabIndex = 24;
@@ -68,13 +66,13 @@ namespace Passwords
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxDescription.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxDescription.Location = new System.Drawing.Point(149, 115);
+            this.textBoxDescription.Location = new System.Drawing.Point(150, 115);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ReadOnly = true;
             this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(284, 135);
+            this.textBoxDescription.Size = new System.Drawing.Size(286, 135);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
             this.textBoxDescription.Text = "Описание";
@@ -84,11 +82,11 @@ namespace Passwords
             this.LabelCompanyName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LabelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelCompanyName.ForeColor = System.Drawing.SystemColors.Control;
-            this.LabelCompanyName.Location = new System.Drawing.Point(149, 84);
+            this.LabelCompanyName.Location = new System.Drawing.Point(150, 84);
             this.LabelCompanyName.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.LabelCompanyName.MaximumSize = new System.Drawing.Size(0, 17);
             this.LabelCompanyName.Name = "LabelCompanyName";
-            this.LabelCompanyName.Size = new System.Drawing.Size(284, 17);
+            this.LabelCompanyName.Size = new System.Drawing.Size(286, 17);
             this.LabelCompanyName.TabIndex = 22;
             this.LabelCompanyName.Text = "Название организации";
             this.LabelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,11 +96,11 @@ namespace Passwords
             // 
             this.labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCopyright.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelCopyright.Location = new System.Drawing.Point(149, 56);
+            this.labelCopyright.Location = new System.Drawing.Point(150, 56);
             this.labelCopyright.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(284, 17);
+            this.labelCopyright.Size = new System.Drawing.Size(286, 17);
             this.labelCopyright.TabIndex = 21;
             this.labelCopyright.Text = "Авторские права";
             this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,11 +109,11 @@ namespace Passwords
             // 
             this.labelVersion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelVersion.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelVersion.Location = new System.Drawing.Point(149, 28);
+            this.labelVersion.Location = new System.Drawing.Point(150, 28);
             this.labelVersion.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelVersion.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(284, 17);
+            this.labelVersion.Size = new System.Drawing.Size(286, 17);
             this.labelVersion.TabIndex = 0;
             this.labelVersion.Text = "Версия";
             this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,26 +122,14 @@ namespace Passwords
             // 
             this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelProductName.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelProductName.Location = new System.Drawing.Point(149, 0);
+            this.labelProductName.Location = new System.Drawing.Point(150, 0);
             this.labelProductName.Margin = new System.Windows.Forms.Padding(6, 0, 3, 0);
             this.labelProductName.MaximumSize = new System.Drawing.Size(0, 17);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(284, 17);
+            this.labelProductName.Size = new System.Drawing.Size(286, 17);
             this.labelProductName.TabIndex = 19;
             this.labelProductName.Text = "Название продукта";
             this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPictureBox.Image = global::Passwords.Properties.Resources.padlock;
-            this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
-            this.logoPictureBox.Size = new System.Drawing.Size(137, 277);
-            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoPictureBox.TabIndex = 12;
-            this.logoPictureBox.TabStop = false;
             // 
             // tableLayoutPanel
             // 
@@ -151,14 +137,13 @@ namespace Passwords
             this.tableLayoutPanel.ColumnCount = 2;
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
-            this.tableLayoutPanel.Controls.Add(this.logoPictureBox, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.labelProductName, 1, 0);
             this.tableLayoutPanel.Controls.Add(this.labelVersion, 1, 1);
             this.tableLayoutPanel.Controls.Add(this.labelCopyright, 1, 2);
             this.tableLayoutPanel.Controls.Add(this.LabelCompanyName, 1, 3);
             this.tableLayoutPanel.Controls.Add(this.textBoxDescription, 1, 4);
             this.tableLayoutPanel.Controls.Add(this.okButton, 1, 5);
-            this.tableLayoutPanel.Location = new System.Drawing.Point(0, 31);
+            this.tableLayoutPanel.Location = new System.Drawing.Point(-145, 38);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 6;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -167,7 +152,7 @@ namespace Passwords
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(436, 283);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(439, 283);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // HeaderPanel
@@ -177,7 +162,7 @@ namespace Passwords
             this.HeaderPanel.Controls.Add(this.CloseButton);
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(436, 32);
+            this.HeaderPanel.Size = new System.Drawing.Size(302, 32);
             this.HeaderPanel.TabIndex = 2;
             // 
             // FormName
@@ -187,7 +172,7 @@ namespace Passwords
             this.FormName.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormName.ForeColor = System.Drawing.Color.White;
-            this.FormName.Location = new System.Drawing.Point(12, 8);
+            this.FormName.Location = new System.Drawing.Point(5, 7);
             this.FormName.Name = "FormName";
             this.FormName.Size = new System.Drawing.Size(43, 16);
             this.FormName.TabIndex = 3;
@@ -202,7 +187,7 @@ namespace Passwords
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.ForeColor = System.Drawing.Color.White;
-            this.CloseButton.Location = new System.Drawing.Point(406, 0);
+            this.CloseButton.Location = new System.Drawing.Point(272, -1);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(30, 30);
             this.CloseButton.TabIndex = 1;
@@ -214,7 +199,7 @@ namespace Passwords
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 315);
+            this.ClientSize = new System.Drawing.Size(300, 315);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -229,7 +214,6 @@ namespace Passwords
             this.Text = "AboutBox";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.AboutBox_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             this.HeaderPanel.ResumeLayout(false);
@@ -245,7 +229,6 @@ namespace Passwords
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.Label labelProductName;
-        private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Panel HeaderPanel;
         private System.Windows.Forms.Button CloseButton;

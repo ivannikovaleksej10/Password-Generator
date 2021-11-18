@@ -29,6 +29,7 @@ namespace Passwords
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.FormName = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
@@ -157,6 +158,7 @@ namespace Passwords
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.HeaderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Settings";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

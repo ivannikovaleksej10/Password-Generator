@@ -14,8 +14,6 @@ namespace Passwords
         {
             InitializeComponent();
 
-            
-
             async void Exit() { for (Opacity = 1; Opacity > .0; Opacity -= .2) await Task.Delay(7); Close(); }
             CloseButton.Click += (s, a) => Exit();
 
@@ -23,7 +21,6 @@ namespace Passwords
             {
                 if (textBox1.TextLength == 0)
                 {
-                    // MessageBox.Show("Вы пытаетесь скопировать пустую строку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -71,7 +68,6 @@ namespace Passwords
                 {
                     x.BackColor = Color.FromArgb(44, 57, 67);    
                 }
-            
             });
 
             textBox1.ForeColor = Color.FromName("White"); textBox1.BackColor = Color.FromArgb(54, 67, 77);
@@ -139,7 +135,7 @@ namespace Passwords
             string abc = "qwertyuiopasdfghjklzxcvbnm";
             if (Properties.Settings.Default.SpecChar == true)
             {
-                abc += @"!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"; // было: !@#$%^&*()
+                abc += @"!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
             }
             if (Properties.Settings.Default.Numbers == true)
             {

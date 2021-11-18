@@ -32,7 +32,7 @@ namespace Passwords
                 };
             });
 
-            new List<Control> { label1, label2, label3, SaveButton, EncryptButton, DecryptButton }.ForEach(x =>
+            new List<Control> { label1, label2, label3, label4 , SaveButton, EncryptButton, DecryptButton }.ForEach(x =>
             {
                 x.ForeColor = Color.FromName("White");
                 if (x.ToString().Contains("u"))
@@ -103,18 +103,25 @@ namespace Passwords
 
             using (SaveFileDialog saveFileDialog1 = new SaveFileDialog())
             {
-                saveFileDialog1.InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments);
-                saveFileDialog1.Filter = "Encrypt Passwords (*.enps)|*.enps|All Files (*.*)|*.*";
-                saveFileDialog1.FilterIndex = 1;
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                if (TbSite.Text.Length > 0 && TbEncrypt.Text.Length > 0)
+                {
+                    saveFileDialog1.InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments);
+                    saveFileDialog1.Filter = "Encrypt Passwords (*.enps)|*.enps|All Files (*.*)|*.*";
+                    saveFileDialog1.FilterIndex = 1;
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                     {
                         string path = saveFileDialog1.FileName;
                         FileStream fs = new FileStream(path, FileMode.Append);
                         using (StreamWriter sw = new StreamWriter(fs))
                         {
-                            sw.WriteLine(TbEncrypt.Text + " " + thisDay.ToString("D"));
+                            sw.WriteLine("Зашифрованный пароль: " + TbEncrypt.Text + " | Сайт: " + TbSite.Text + " | Дата:" + thisDay.ToString("D"));
                         }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Зашифруйте пароль или введите значение в поле 'Сайт'.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

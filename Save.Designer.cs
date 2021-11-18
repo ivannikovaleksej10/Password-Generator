@@ -29,6 +29,7 @@ namespace Passwords
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Save));
             this.label1 = new System.Windows.Forms.Label();
             this.TbValue = new System.Windows.Forms.TextBox();
             this.TbEncrypt = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@ namespace Passwords
             this.EncryptButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TbSite = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Button();
             this.FormName = new System.Windows.Forms.Label();
@@ -49,7 +52,7 @@ namespace Passwords
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 14);
+            this.label1.Location = new System.Drawing.Point(102, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
@@ -57,14 +60,14 @@ namespace Passwords
             // 
             // TbValue
             // 
-            this.TbValue.Location = new System.Drawing.Point(163, 11);
+            this.TbValue.Location = new System.Drawing.Point(166, 13);
             this.TbValue.Name = "TbValue";
             this.TbValue.Size = new System.Drawing.Size(264, 20);
             this.TbValue.TabIndex = 1;
             // 
             // TbEncrypt
             // 
-            this.TbEncrypt.Location = new System.Drawing.Point(163, 37);
+            this.TbEncrypt.Location = new System.Drawing.Point(166, 39);
             this.TbEncrypt.Name = "TbEncrypt";
             this.TbEncrypt.Size = new System.Drawing.Size(264, 20);
             this.TbEncrypt.TabIndex = 3;
@@ -72,7 +75,7 @@ namespace Passwords
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 40);
+            this.label2.Location = new System.Drawing.Point(17, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 13);
             this.label2.TabIndex = 2;
@@ -81,7 +84,7 @@ namespace Passwords
             // TbDecrypt
             // 
             this.TbDecrypt.BackColor = System.Drawing.SystemColors.Window;
-            this.TbDecrypt.Location = new System.Drawing.Point(163, 63);
+            this.TbDecrypt.Location = new System.Drawing.Point(166, 65);
             this.TbDecrypt.Name = "TbDecrypt";
             this.TbDecrypt.ReadOnly = true;
             this.TbDecrypt.Size = new System.Drawing.Size(264, 20);
@@ -90,7 +93,7 @@ namespace Passwords
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 66);
+            this.label3.Location = new System.Drawing.Point(11, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 13);
             this.label3.TabIndex = 4;
@@ -100,7 +103,7 @@ namespace Passwords
             // 
             this.DecryptButton.FlatAppearance.BorderSize = 0;
             this.DecryptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DecryptButton.Location = new System.Drawing.Point(333, 89);
+            this.DecryptButton.Location = new System.Drawing.Point(337, 115);
             this.DecryptButton.Name = "DecryptButton";
             this.DecryptButton.Size = new System.Drawing.Size(94, 23);
             this.DecryptButton.TabIndex = 6;
@@ -112,7 +115,7 @@ namespace Passwords
             // 
             this.EncryptButton.FlatAppearance.BorderSize = 0;
             this.EncryptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EncryptButton.Location = new System.Drawing.Point(233, 89);
+            this.EncryptButton.Location = new System.Drawing.Point(237, 115);
             this.EncryptButton.Name = "EncryptButton";
             this.EncryptButton.Size = new System.Drawing.Size(94, 23);
             this.EncryptButton.TabIndex = 7;
@@ -124,7 +127,7 @@ namespace Passwords
             // 
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Location = new System.Drawing.Point(133, 89);
+            this.SaveButton.Location = new System.Drawing.Point(137, 115);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(94, 23);
             this.SaveButton.TabIndex = 8;
@@ -135,6 +138,8 @@ namespace Passwords
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.TbSite);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.TbValue);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.TbEncrypt);
@@ -146,8 +151,25 @@ namespace Passwords
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(442, 120);
+            this.panel1.Size = new System.Drawing.Size(442, 150);
             this.panel1.TabIndex = 9;
+            // 
+            // TbSite
+            // 
+            this.TbSite.BackColor = System.Drawing.SystemColors.Window;
+            this.TbSite.Location = new System.Drawing.Point(166, 89);
+            this.TbSite.Name = "TbSite";
+            this.TbSite.Size = new System.Drawing.Size(264, 20);
+            this.TbSite.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(129, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Сайт\r\n";
             // 
             // HeaderPanel
             // 
@@ -192,10 +214,11 @@ namespace Passwords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 154);
+            this.ClientSize = new System.Drawing.Size(441, 181);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Save";
             this.Text = "Save";
             this.panel1.ResumeLayout(false);
@@ -221,5 +244,7 @@ namespace Passwords
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Label FormName;
         public System.Windows.Forms.TextBox TbValue;
+        private System.Windows.Forms.TextBox TbSite;
+        private System.Windows.Forms.Label label4;
     }
 }
